@@ -1,6 +1,6 @@
 package br.scontente.page;
 
-import core.BasePage;
+import br.scontente.core.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 

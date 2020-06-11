@@ -1,10 +1,12 @@
 package br.scontente.feature.steps_definition;
 
+import br.scontente.page.HomePage;
+import br.scontente.page.NaMidiaPage;
 import io.cucumber.java8.Pt;
-import page.HomePage;
-import page.NaMidiaPage;
 
 import java.util.Random;
+
+import static org.junit.Assert.assertEquals;
 
 public class InMetricsWebSiteSteps implements Pt {
 

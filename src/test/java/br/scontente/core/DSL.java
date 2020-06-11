@@ -7,8 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-import static core.DriverFactory.*;
-import static core.DriverFactory.pegarDriver;
+import static br.scontente.core.DriverFactory.*;
 
 public class DSL {
 

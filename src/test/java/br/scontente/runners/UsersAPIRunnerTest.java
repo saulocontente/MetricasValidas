@@ -1,6 +1,6 @@
 package br.scontente.runners;
 
-import core.Constants;
+import br.scontente.core.Constants;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import io.restassured.builder.RequestSpecBuilder;
@@ -12,8 +12,8 @@ import static io.restassured.RestAssured.requestSpecification;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/java/feature/UsersFeature.feature",
-        glue = "feature.steps_definition",
+        features = "src/test/java/br/scontente/feature/UsersFeature.feature",
+        glue = "br.scontente.feature.steps_definition",
         snippets = CucumberOptions.SnippetType.CAMELCASE,
         plugin = "pretty"
 )

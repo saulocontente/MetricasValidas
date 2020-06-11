@@ -6,13 +6,12 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 
-import static core.DriverFactory.encerrarDriver;
-import static core.DriverFactory.iniciarDriver;
+import static br.scontente.core.DriverFactory.*;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/java/feature/InMetricsWebSiteFeature.feature",
-        glue = "feature.steps_definition",
+        features = "src/test/java/br/scontente/feature/InMetricsWebSiteFeature.feature",
+        glue = "br.scontente.feature.steps_definition",
         plugin = "pretty",
         snippets = CucumberOptions.SnippetType.CAMELCASE
 )
