@@ -3,7 +3,9 @@ package br.scontente.feature.steps_definition;
 import io.cucumber.java8.Pt;
 import io.restassured.response.Response;
 
-import static io.restassured.RestAssured.given;
+import static io.restassured.matcher.RestAssuredMatchers.*;
+import static org.hamcrest.Matchers.*;
+import static io.restassured.RestAssured.*;
 
 public class UsersSteps implements Pt {
 
@@ -33,6 +35,9 @@ public class UsersSteps implements Pt {
             response
             .then()
                     .statusCode(statusCode)
+                    .assertThat()
+                        .body("data.id", hasItems(7,12))
+                        .body("data.first_name", hasItems("Michael","Rachel"))
             ;
         });
 
