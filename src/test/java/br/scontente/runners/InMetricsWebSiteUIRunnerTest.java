@@ -1,5 +1,6 @@
 package br.scontente.runners;
 
+import br.scontente.utils.SistemaOperacional;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import io.cucumber.junit.CucumberOptions.SnippetType;
@@ -21,6 +22,8 @@ public class InMetricsWebSiteUIRunnerTest {
     @BeforeClass
     public static void iniciarSessao() {
 
+        String caminhoDriver = SistemaOperacional.pegarCaminhoDoDriverPorSistemaOperacional();
+        System.setProperty("webdriver.chrome.driver", caminhoDriver);
         iniciarDriver().manage().window().maximize();
 
     }
